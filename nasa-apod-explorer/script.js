@@ -1,6 +1,6 @@
 // 1. NASA API CONFIGURATION
 // Insert your newly regenerated NASA API key here.
-const API_KEY = "Your_Key";
+const API_KEY = "Your_NASA_API_Key";
 const API_URL =
 "https://science.nasa.gov/wp-json/wp/v2/apod-basic/";
 const STORAGE_KEY = "nasaApodSearches";
