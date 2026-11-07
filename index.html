@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>NASA APOD Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="stars stars-one"></div>
+  <div class="stars stars-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="NASA APOD Explorer home">
+      <span class="brand-mark">✦</span>
+      <span>ORBIT<span class="brand-muted"> / APOD</span></span>
+    </a>
+    <span class="topbar-note"><span class="live-dot"></span> NASA ASTRONOMY PICTURE OF THE DAY</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro">
+      <p class="eyebrow">A WINDOW INTO THE UNIVERSE</p>
+      <h1>Explore the cosmos,<br><span>one day at a time.</span></h1>
+      <p class="intro-copy">Discover the image NASA selected for any day in space history.</p>
+    </section>
+
+    <section class="search-panel" aria-labelledby="search-heading">
+      <div>
+        <p class="section-kicker">TIME TRAVEL THROUGH SPACE</p>
+        <h2 id="search-heading">Choose a date</h2>
+      </div>
+      <form id="search-form">
+        <label class="sr-only" for="search-input">Select a date</label>
+        <div class="input-wrap">
+          <span aria-hidden="true">▦</span>
+          <input type="date" id="search-input" required>
+        </div>
+        <button type="submit" id="search-button"><span>Explore date</span><span aria-hidden="true">↗</span></button>
+      </form>
+      <p class="helper-text">Pick any date from June 16, 1995 onward.</p>
+    </section>
+
+    <div class="content-grid">
+      <section class="feature-section" aria-labelledby="feature-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">YOUR DAILY DOSE OF WONDER</p>
+            <h2 id="feature-heading">The cosmic spotlight</h2>
+          </div>
+          <span class="today-label"><span class="live-dot"></span> FEATURED</span>
+        </div>
+        <div id="current-image-container" aria-live="polite">
+          <div class="loading-state"><span class="loader"></span><p>Connecting to the universe…</p></div>
+        </div>
+      </section>
+
+      <aside class="history-panel" aria-labelledby="history-heading">
+        <div class="history-heading">
+          <div>
+            <p class="section-kicker">YOUR COLLECTION</p>
+            <h2 id="history-heading">Search history</h2>
+          </div>
+          <span class="history-count" id="history-count">0</span>
+        </div>
+        <p class="history-description">Your previously explored dates live here.</p>
+        <ul id="search-history"></ul>
+        <p class="empty-history" id="empty-history">No searches yet.<br>Choose a date to start exploring.</p>
+        <button type="button" class="clear-history" id="clear-history">Clear history</button>
+      </aside>
+    </div>
+
+    <footer>
+      <span>Made for curious minds.</span>
+      <span>Data provided by NASA · Astronomy Picture of the Day</span>
+    </footer>
+  </main>
+</body>
+</html>
